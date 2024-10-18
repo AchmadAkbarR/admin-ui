@@ -1,8 +1,9 @@
+import AuthLayout from "../components/Layouts/AuthLayout"
 
 const SignInPage = () => {
   return (
-    <AuthLay>
-  )
-}
+    <AuthLayout />
+  );
+};
 
-export default signIn
+export default SignInPage;

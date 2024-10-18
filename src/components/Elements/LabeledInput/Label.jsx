@@ -1,9 +1,9 @@
-const Label = () => {
+const Label = ({ htmlFor, labelText }) => {
   return (
-    <label htmlFor="email" className="block text-sm mb-2">
-         Email Address
+    <label htmlFor={htmlFor} className="block text-sm mb-2">
+      {labelText}
     </label>
-  )
-}
+  );
+};
 
 export default Label;
