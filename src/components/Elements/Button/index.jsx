@@ -1,13 +1,13 @@
-import React from 'react'
+const Button = (props) => {
+  const { children, variant, type } = props;
 
-const Button = () => {
   return (
     <button
-        className="h-12 rounded-md text-sm bg-primary w-full text-white"
-        type="submit"
-         >
-          Login
-        </button>
+      className={`h-12 rounded-md text-sm ${variant}`}
+      type={type}
+    >
+      {children}
+    </button>
   );
 };
 

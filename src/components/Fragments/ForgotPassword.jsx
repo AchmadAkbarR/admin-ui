@@ -4,7 +4,7 @@ import LabeledInput from "../Elements/LabeledInput";
 import Button from "../Elements/Button";
 import { Link } from "react-router-dom"; // Assuming you're using react-router
 
-const ForgotPw = () => {
+const ForgotPassword = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-special-mainBg">
       <div className="w-full max-w-sm ">
@@ -42,4 +42,4 @@ const ForgotPw = () => {
   );
 };
 
-export default ForgotPw;
+export default ForgotPassword;
