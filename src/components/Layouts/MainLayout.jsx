@@ -1,5 +1,6 @@
-import Navbar from "../Fragments/Navbar";
+import { Children } from "react";
 import Header from "../Fragments/Header";
+import Navbar from "../Fragments/Navbar";
 
 const MainLayout = (props) => {
     const {children} = props;
@@ -7,18 +8,14 @@ const MainLayout = (props) => {
       <div className="flex bg-special-mainBg w-screen min-h-screen max-w-full">
         {/* navbar start*/}
         <Navbar/>
-{/* navbar end*/}
+        {/* navbar end*/}
         <div className="w-screen">
-          {/* header start*/}
+        {/* header start*/}
         <Header/>
-{/* header end*/}
-          {/* content start*/}
-<main className="px-6 py-4">{children}
-  {/* top content start*/}
-  
-  {/* bottom content end*/}
-</main>
-{/* content end*/}
+        {/* header end*/}
+        {/* content start*/}
+            <main className="px-6 py-4">{children}</main>
+        {/* content end*/}
         </div>
       </div>
     );
