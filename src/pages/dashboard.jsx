@@ -2,7 +2,7 @@ import Card from "../components/Elements/Card";
 import MainLayout from "../components/Layouts/MainLayout";
 import CardBill from "../components/Fragments/dashboard/CardBill2";
 import CardExpenseBreakdown from "../components/Fragments/dashboard/CardExpenseBreakdown2";
-import CardTransaction from "../components/Fragments/dashboard/CardTransaction2.jsx2";
+import CardTransaction from "../components/Fragments/dashboard/CardTransaction2.jsx";
 
 const DashboardPage = () => {
   return (
