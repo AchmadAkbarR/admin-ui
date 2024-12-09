@@ -18,6 +18,7 @@ const DashboardPage = () => {
         <CardTransaction />
         <CardStatistic />
         <CardExpenseBreakdown />
+        <div className="c"></div>
       </div>
       {/* bottom content end*/}
     </MainLayout>
