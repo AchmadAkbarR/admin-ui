@@ -24,23 +24,24 @@ const Stepper = (props) => {
 
     return (
         <>
-        <div>{desc[activeStep]}</div>
+        <div>{desc[activeStep]}</div>    
         <MobileStepper
             variant="dots"
             steps={dataNum}
             position="static"
             activeStep={activeStep}
-            sx={{ maxWidth: "100%",
-                 flexGrow: 1,
-                "& .MuiMobileStepper-dot" : {
-                    backgroundColor: "darkgrey",
+            sx={{
+                maxWidth: "100%",
+                flexGrow: 1,
+                "& .MuiMobileStepper-dot": {
+                    backgroundColor: "darkgray",
                 },
-                "& .MuiMobileStepper-dotActive" : {
+                "& .MuiMobileStepper-dotActive": {
                     backgroundColor: "#299D91",
-                },                
+                },
                 }}
             nextButton={
-                <Button size="small" onClick={handleNext} sx={{color: "black", fontWeight: "bold"}} disabled={activeStep === dataNum - 1}>
+                <Button size="small" onClick={handleNext} sx={{color: "black", fontWeight: "bold"}} disabled={activeStep === dataNum -1}>
                     Next
                     {theme.direction === 'rtl' ? (
                         <KeyboardArrowLeft />
@@ -50,7 +51,7 @@ const Stepper = (props) => {
                 </Button>
             }
             backButton={
-                <Button size="small" onClick={handleBack} sx={{color: "black", fontWeight: "bold"}} disabled={activeStep === 0}>
+                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                     {theme.direction === 'rtl' ? (
                         <KeyboardArrowRight />
                     ) : (
@@ -60,7 +61,7 @@ const Stepper = (props) => {
                 </Button>
             }
         />
-    </>
+        </>
     );
 }
 

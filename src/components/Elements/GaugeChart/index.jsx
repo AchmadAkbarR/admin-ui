@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
     GaugeContainer,
     GaugeValueArc,
@@ -30,8 +31,7 @@ import {
   }
   
   export default function CompositionExample(props) {
-    const {desc} = props;
-
+    const { desc } = props;
     return (
       <GaugeContainer
         width={130}

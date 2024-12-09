@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import accounts from "../../../data/accounts";
 import Card from "../../Elements/Card";
 import Stepper from "../../Elements/Stepper";
-import { Link } from "react-router-dom";
-import { Icon } from "../../Icon";
+import { Icon } from "../../Elements/Icon";
 
 const CardBalance = () => {
     const balanceCard = accounts.map((account) => (
@@ -37,7 +37,7 @@ const CardBalance = () => {
                             ${account.balance}
                         </span>
                         <div className="bg-white max-w-min rounded-full ps-1 pt-1 ms-4">
-                            
+                            <Icon.ArrowUpRight />
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const CardBalance = () => {
     ));
 
     return (
-        <Card title="Total Balance" desc={<Stepper desc={balanceCard} />} />
+        <Card title="Total Balance" desc={<Stepper desc={balanceCard} />}/>
     )
 }
 

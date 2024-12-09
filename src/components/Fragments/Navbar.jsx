@@ -3,7 +3,9 @@ import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
 import { useState } from "react";
 
+
 const Navbar = () => {
+
   const themes = [
     { name: "theme-green", bgcolor: "bg-[#299D91]", color: "#299D91" },
     { name: "theme-blue", bgcolor: "bg-[#1E90FF]", color: "#1E90FF" },
@@ -13,6 +15,8 @@ const Navbar = () => {
   ];
   
   const [theme, setTheme] = useState(themes[0]);
+
+
 
   const menus = [
     {
@@ -81,22 +85,22 @@ const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        <div>
         <div className="md:flex md:gap-2">
-  Themes
-  {themes.map((t) => (
-    <div
-      key={t.name}
-      className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2`}
-      onClick={() => setTheme(t)}
-    ></div>
-  ))}
-</div>
+        Themes
+          {themes.map((t) => (
+        <div
+          key={t.name}
+          className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2`}
+          onClick={() => setTheme(t)}
+        ></div>
+        ))}
+        </div>
+        <div>
           <NavLink
             to="/logout"
             className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white"
           >
-            <div className="mx-auto sm:mx-0">
+            <div className="mx-auto sm:mx-0 text-primary ">
               <Icon.Logout />
             </div>
             <div className="ms-3 hidden sm:block">Logout</div>
