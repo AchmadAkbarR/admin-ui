@@ -1,6 +1,6 @@
 import Card from "../components/Elements/Card";
 import MainLayout from "../components/Layouts/MainLayout";
-import CardBill from "../components/Fragments/Dashboard/CardBill";
+import CardBill from "../components/Fragments/Dashboard/CardBull";
 import CardExpenseBreakdown from "../components/Fragments/Dashboard/CardExpenseBreakdawn";
 import CardTransaction from "../components/Fragments/Dashboard/CardTransaction.jsx";
 import CardBalance from "../components/Fragments/Dashboard/CardBalance";
