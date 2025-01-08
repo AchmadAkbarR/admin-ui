@@ -1,7 +1,7 @@
 import Button from "../Elements/Button";
 import LabeledInput from "../Elements/LabeledInput";
 import { useContext } from "react";
-import { ColorModeContext } from "../../context/colorModeContext";
+import { ColorModeContext } from "../../context/ColorModeContext";
 
 const FormSignUp = () => {
   const { isDarkMode } = useContext(ColorModeContext); // Gunakan context untuk Dark Mode
