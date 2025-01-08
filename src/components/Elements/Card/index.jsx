@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ColorModeContext } from "../../../context/colorModeContext";
+import { ColorModeContext } from "../../../context/ColorModeContext";
 
 const Card = (props) => {
   const { title = false, desc, variant } = props;
