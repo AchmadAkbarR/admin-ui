@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ColorModeContext } from "../context/colorModeContext"; // Import Context
+import { ColorModeContext } from "../context/ColorModeContext"; // Import Context
 import MainLayout from "../components/Layouts/MainLayout";
 import CardBalance from "../components/Fragments/Dashboard/CardBalance";
 import CardGoal from "../components/Fragments/Dashboard/CardGoal";
