@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "../Elements/Logo";
 import { useContext } from "react";
 import { NotifContext } from "../../context/notifContext";
-import { ColorModeContext } from "../../context/colorModeContext";
+import { ColorModeContext } from "../../context/ColorModeContext";
 import SimpleBackdrop from "../Elements/Backdrop";
 import CustomizedSnackbars from "../Elements/SnackBar";
 import * as motion from "motion/react-client";

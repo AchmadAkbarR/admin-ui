@@ -2,7 +2,7 @@ import Header from "../Fragments/Header";
 import Navbar from "../Fragments/Navbar";
 import { useContext } from "react";
 import { NotifContext } from "../../context/notifContext";
-import { ColorModeContext } from "../../context/colorModeContext"; // Import ColorModeContext
+import { ColorModeContext } from "../../context/ColorModeContext"; // Import ColorModeContext
 import SimpleBackdrop from "../Elements/Backdrop";
 import CustomizedSnackbars from "../Elements/SnackBar";
 
