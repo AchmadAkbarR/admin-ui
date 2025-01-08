@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import Logo from "../Elements/Logo";
 import { useContext } from "react";
 import { NotifContext } from "../../context/notifContext";
+import { ColorModeContext } from "../../context/colorModeContext";
 import SimpleBackdrop from "../Elements/Backdrop";
 import CustomizedSnackbars from "../Elements/SnackBar";
 import * as motion from "motion/react-client";
 
-
 const AuthLayout = (props) => {
   const { children, type } = props;
   const { msg, setMsg, open, setOpen, isLoading, setIsLoading } = useContext(NotifContext);
+  const { isDarkMode, toggleColorMode } = useContext(ColorModeContext);
 
   return (
-    <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+    <div className={`flex justify-center min-h-screen items-center ${isDarkMode ? 'bg-black text-white' : 'bg-special-mainBg text-black'}`}>
       {isLoading && (
           <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading}/>
         )}
@@ -62,13 +63,13 @@ const AuthLayout = (props) => {
         {type != "forgot" && (
           <>
             {/* teks start */}
-            <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
-              <div className="border border-gray-05 w-full"></div>
-              <div className="px-2 bg-special-mainBg absolute">
-                {" "}
+            <div className="my-9 px-7 flex justify-center text-xs items-center relative">
+              <div className={`border w-full ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`}></div>
+              <div className={`px-2 absolute ${isDarkMode ? 'bg-black text-gray-400' : 'bg-special-mainBg text-gray-600'}`}>
                 or {type} with
               </div>
             </div>
+            {/* teks end */}
             {/* teks end */}
             {/* sign in with google start */}
             <div className="mb-8">
@@ -182,6 +183,14 @@ const AuthLayout = (props) => {
           )}
         </div>
         {/* link end */}
+
+        {/* toggle mode start */}
+        <div className="flex justify-center mt-4">
+          <button onClick={toggleColorMode} className="p-2">
+            {isDarkMode ? '🌞' : '🌙'}
+          </button>
+        </div>
+        {/* toggle mode end */}
       </motion.div>
       {/* container end */}
     </div>
