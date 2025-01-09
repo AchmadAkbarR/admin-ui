@@ -19,7 +19,7 @@ const DashboardPage = () => {
     try {
       const response = await axios.get(
         "https://jwt-auth-eight-neon.vercel.app/bills",
-        {
+        { 
           headers: {
             Authorization: 'Bearer ${token}', // Sertakan token dalam header
           },
